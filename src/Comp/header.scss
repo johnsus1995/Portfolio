@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 80px;
+    // background-color: #cccccc;
+}
+nav{
+    background-image: linear-gradient(to right, rgb(177, 177, 177) , #777676);
+    // background:#3e364c;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+label.logo{
+    color: #3e364c;
+    font-size: 13px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px; 
+    list-style: none;
+    
+}
+nav ul li a{
+    color:white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    // text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #ff0065;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+//my slider 
+.slider{
+    width: 100px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    left:100px;
+    top:80px;
+    z-index: -1;
+}
+@media (max-width:955px){
+    .slider{
+        // left:200px;
+        z-index: 1;
+    }
+}
+
+
+@media (max-width:955px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 15px;
+        height: 70px;
+    }
+}
+@media (max-width:955px){
+    .checkbtn{
+        display: block;
+    }
+    //this is the slider
+    ul,.slider-yes{
+        position: absolute;
+        width: 100%;
+        height:100vh;
+        background: #2c3e50;
+        top:80px;
+        left:-100px;
+        text-align: center;
+        transition:all .5s;
+    }
+    ul,.slider-no{
+        display: none;
+        right: 200px;
+    }
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
